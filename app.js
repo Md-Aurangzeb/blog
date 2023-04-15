@@ -1,7 +1,7 @@
 const express=require("express");
 const bodyParser=require("body-parser");
 const https=require("https");
-// const mongoose=require('mongoose');
+const mongoose=require('mongoose');
 // var MongoClient = require('mongodb').MongoClient;
 const app=express();
 // var url = "mongodb://localhost:27017/postsDB";
@@ -50,6 +50,6 @@ app.post("/",function(req,res){
     })
 
 })
-app.listen(3000,function(){
+app.listen(process.env.PORT || 3000,function(){
     console.log("server is hosted on port : 3000.");
 })
