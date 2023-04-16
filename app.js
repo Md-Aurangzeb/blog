@@ -11,7 +11,8 @@ app.use(bodyParser.urlencoded({extended : true}));
 
 
 app.get("/",function(req,res){
-    res.sendFile(__dirname+ "/index.html");
+    // res.sendFile(__dirname+ "/index.html");
+    res.render("post",{posts:posts,isProfain:false});
 })
 // db.connectDB();
 app.post("/",function(req,res){
